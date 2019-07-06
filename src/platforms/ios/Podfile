@@ -1,1 +1,1 @@
-pod 'ZendeskSDK'
+pod 'ZendeskSDK', '3.0.0'

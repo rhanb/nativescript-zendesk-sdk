@@ -23,7 +23,8 @@
     "exclude": [
         "node_modules",
         "platforms",
-        "../src/node_modules"
+        "../src/node_modules",
+        "../src/platforms"
     ],
     "include": [
         "../src",
