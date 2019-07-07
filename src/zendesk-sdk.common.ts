@@ -1,28 +1,30 @@
-import { Observable } from 'tns-core-modules/data/observable';
-import * as app from 'tns-core-modules/application';
-import * as dialogs from 'tns-core-modules/ui/dialogs';
-
-export class Common extends Observable {
-  public message: string;
-
-  constructor() {
-    super();
-    this.message = Utils.SUCCESS_MSG();
-  }
-
-  public greet() {
-    return "Hello, NS";
-  }
+export interface AnonUserIdentity {
+  name?: string;
+  email?: string;
 }
 
-export class Utils {
-  public static SUCCESS_MSG(): string {
-    let msg = `Your plugin is working on ${app.android ? 'Android' : 'iOS'}.`;
+export interface HelpCenterOptions {
+  /** default: false */
+  categoriesCollapsedAndroid?: boolean;
+  /** default: true */
+  conversationsMenu?: boolean;
+}
 
-    setTimeout(() => {
-      dialogs.alert(`${msg} For real. It's really working :)`).then(() => console.log(`Dialog closed.`));
-    }, 2000);
+export interface InitConfig {
+  zendeskUrl: string;
+  applicationId: string;
+  clientId: string;
+  userLocale?: string;
+  /** AnonUserIdentity object or JWT Token string */
+  identity?: AnonUserIdentity | string;
+}
 
-    return msg;
-  }
+export interface IosThemeSimple {
+  primaryColor: any;
+}
+
+export interface RequestConfig {
+  requestSubject?: string;
+  addDeviceInfo?: boolean;
+  tags?: Array<string>;
 }

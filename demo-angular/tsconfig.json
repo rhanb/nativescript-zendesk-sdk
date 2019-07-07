@@ -25,7 +25,8 @@
         "node_modules",
         "platforms",
         "../src/node_modules",
-        "../src/platforms"
+        "../src/platforms",
+        "../src/typings"
     ],
     "include": [
         "../src",
