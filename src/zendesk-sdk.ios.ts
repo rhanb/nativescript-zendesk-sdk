@@ -213,12 +213,7 @@ export class ZendeskSdk implements ZendeskSdkBase {
         (<any>vc)
       )).uiDelegate = new ZDKHelpCenterConversationsUIDelegateImpl();
     }
-    // topmost().ios.controller.pushViewController(vc, true);
-    UIApplication.sharedApplication.keyWindow.rootViewController.presentViewControllerAnimatedCompletion(
-      vc,
-      true,
-      null
-    );
+    topmost().ios.controller.pushViewControllerAnimated(vc, true);
   }
 
   private constructor() {}
@@ -233,6 +228,6 @@ class ZDKHelpCenterConversationsUIDelegateImpl extends NSObject
   }
 
   public navBarConversationsUIType(): ZDKNavBarConversationsUIType {
-    return ZDKNavBarConversationsUIType.Image;
+    return ZDKNavBarConversationsUIType.None;
   }
 }
