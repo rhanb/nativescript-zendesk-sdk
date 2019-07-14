@@ -1,12 +1,15 @@
 <Page class="page"
     navigatingTo="onNavigatingTo" 
-    xmlns="http://schemas.nativescript.org/tns.xsd">
+    xmlns="http://schemas.nativescript.org/tns.xsd" showingModally="onShowingModally">
     
     <ActionBar class="action-bar">
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <GridLayout>
-        <!-- Add your page content here -->
+    <GridLayout rows="auto, *">
+
+        <Button text="Open modal" tap="showHelpCenter" textWrap="true" />
+
     </GridLayout>
 </Page>
+
