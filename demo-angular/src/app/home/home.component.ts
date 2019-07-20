@@ -19,19 +19,15 @@ export class HomeComponent implements OnInit {
     showHelpCenter() {
         ZendeskSdk.showHelpCenter({
             contactUsButtonVisible: true,
-            categoriesCollapsed: false,
-            conversationsMenu: false
+            categoriesCollapsed: true,
+            conversationsMenu: true
         });
     }
     
     createRequest() {
         ZendeskSdk.createRequest({
             requestSubject: 'toto android',
-            tags: ['sdk', 'android'],
-            customFields: [{
-                id: '360003316300',
-                value: 'Toto'
-            }]
+            tags: ['sdk', 'android']
         });
     }
     

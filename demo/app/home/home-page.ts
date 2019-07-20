@@ -42,11 +42,7 @@ export function showHelpCenter() {
 export function createRequest() {
     ZendeskSdk.createRequest({
         requestSubject: 'toto android',
-        tags: ['sdk', 'android'],
-        customFields: [{
-            id: '360003316300',
-            value: 'Toto'
-        }]
+        tags: ['sdk', 'android']
     });
 }
 
