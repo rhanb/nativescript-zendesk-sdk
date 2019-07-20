@@ -1,327 +1,366 @@
+declare class HelpCenterArticleVotingHandler extends NSObject
+  implements ZDKHelpCenterArticleRatingHandlerProtocol {
+  static alloc(): HelpCenterArticleVotingHandler; // inherited from NSObject
 
-declare class HelpCenterArticleVotingHandler extends NSObject implements ZDKHelpCenterArticleRatingHandlerProtocol {
+  static new(): HelpCenterArticleVotingHandler; // inherited from NSObject
 
-	static alloc(): HelpCenterArticleVotingHandler; // inherited from NSObject
+  readonly debugDescription: string; // inherited from NSObjectProtocol
 
-	static new(): HelpCenterArticleVotingHandler; // inherited from NSObject
+  readonly description: string; // inherited from NSObjectProtocol
 
-	readonly debugDescription: string; // inherited from NSObjectProtocol
+  readonly hash: number; // inherited from NSObjectProtocol
 
-	readonly description: string; // inherited from NSObjectProtocol
+  readonly isProxy: boolean; // inherited from NSObjectProtocol
 
-	readonly hash: number; // inherited from NSObjectProtocol
+  readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
 
-	readonly isProxy: boolean; // inherited from NSObjectProtocol
+  readonly; // inherited from NSObjectProtocol
 
-	readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
+  constructor(o: { articleId: string; andLocale: string });
 
-	readonly  // inherited from NSObjectProtocol
+  articleRatingVoteSelectedAtIndex(
+    ratingState: ZDKHelpCenterArticleRatingStateProtocol,
+    index: number
+  ): void;
 
-	constructor(o: { articleId: string; andLocale: string; });
+  class(): typeof NSObject;
 
-	articleRatingVoteSelectedAtIndex(ratingState: ZDKHelpCenterArticleRatingStateProtocol, index: number): void;
+  conformsToProtocol(aProtocol: any /* Protocol */): boolean;
 
-	class(): typeof NSObject;
+  currentArticleVote(): number;
 
-	conformsToProtocol(aProtocol: any /* Protocol */): boolean;
+  initWithArticleIdAndLocale(articleId: string, locale: string): this;
 
-	currentArticleVote(): number;
+  isEqual(object: any): boolean;
 
-	initWithArticleIdAndLocale(articleId: string, locale: string): this;
+  isKindOfClass(aClass: typeof NSObject): boolean;
 
-	isEqual(object: any): boolean;
+  isMemberOfClass(aClass: typeof NSObject): boolean;
 
-	isKindOfClass(aClass: typeof NSObject): boolean;
+  performSelector(aSelector: string): any;
 
-	isMemberOfClass(aClass: typeof NSObject): boolean;
+  performSelectorWithObject(aSelector: string, object: any): any;
 
-	performSelector(aSelector: string): any;
+  performSelectorWithObjectWithObject(
+    aSelector: string,
+    object1: any,
+    object2: any
+  ): any;
 
-	performSelectorWithObject(aSelector: string, object: any): any;
+  respondsToSelector(aSelector: string): boolean;
 
-	performSelectorWithObjectWithObject(aSelector: string, object1: any, object2: any): any;
+  retainCount(): number;
 
-	respondsToSelector(aSelector: string): boolean;
-
-	retainCount(): number;
-
-	self(): this;
+  self(): this;
 }
 
 declare class RequestCoordinator extends NSObject {
+  static alloc(): RequestCoordinator; // inherited from NSObject
 
-	static alloc(): RequestCoordinator; // inherited from NSObject
-
-	static new(): RequestCoordinator; // inherited from NSObject
+  static new(): RequestCoordinator; // inherited from NSObject
 }
 
-declare class ZDKArticleUiConfiguration extends NSObject implements ZDKUiConfiguration {
+declare class ZDKArticleUiConfiguration extends NSObject {
+  static alloc(): ZDKArticleUiConfiguration; // inherited from NSObject
 
-	static alloc(): ZDKArticleUiConfiguration; // inherited from NSObject
+  static new(): ZDKArticleUiConfiguration; // inherited from NSObject
 
-	static new(): ZDKArticleUiConfiguration; // inherited from NSObject
+  deflectionEnabled: boolean;
 
-	deflectionEnabled: boolean;
+  hideContactSupport: boolean;
 
-	hideContactSupport: boolean;
+  showContactOptions: boolean;
 
-	showContactOptions: boolean;
+  readonly debugDescription: string; // inherited from NSObjectProtocol
 
-	readonly debugDescription: string; // inherited from NSObjectProtocol
+  readonly description: string; // inherited from NSObjectProtocol
 
-	readonly description: string; // inherited from NSObjectProtocol
+  readonly hash: number; // inherited from NSObjectProtocol
 
-	readonly hash: number; // inherited from NSObjectProtocol
+  readonly isProxy: boolean; // inherited from NSObjectProtocol
 
-	readonly isProxy: boolean; // inherited from NSObjectProtocol
+  readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
 
-	readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
+  readonly; // inherited from NSObjectProtocol
 
-	readonly  // inherited from NSObjectProtocol
+  constructor(); // inherited from any
 
-	constructor(); // inherited from ZDKUiConfiguration
+  class(): typeof NSObject;
 
-	class(): typeof NSObject;
+  conformsToProtocol(aProtocol: any /* Protocol */): boolean;
 
-	conformsToProtocol(aProtocol: any /* Protocol */): boolean;
+  init(): this;
 
-	init(): this;
+  isEqual(object: any): boolean;
 
-	isEqual(object: any): boolean;
+  isKindOfClass(aClass: typeof NSObject): boolean;
 
-	isKindOfClass(aClass: typeof NSObject): boolean;
+  isMemberOfClass(aClass: typeof NSObject): boolean;
 
-	isMemberOfClass(aClass: typeof NSObject): boolean;
+  performSelector(aSelector: string): any;
 
-	performSelector(aSelector: string): any;
+  performSelectorWithObject(aSelector: string, object: any): any;
 
-	performSelectorWithObject(aSelector: string, object: any): any;
+  performSelectorWithObjectWithObject(
+    aSelector: string,
+    object1: any,
+    object2: any
+  ): any;
 
-	performSelectorWithObjectWithObject(aSelector: string, object1: any, object2: any): any;
+  respondsToSelector(aSelector: string): boolean;
 
-	respondsToSelector(aSelector: string): boolean;
+  retainCount(): number;
 
-	retainCount(): number;
-
-	self(): this;
+  self(): this;
 }
 
 declare class ZDKConstants extends NSObject {
+  static alloc(): ZDKConstants; // inherited from NSObject
 
-	static alloc(): ZDKConstants; // inherited from NSObject
+  static colorForToast(): UIColor;
 
-	static colorForToast(): UIColor;
-
-	static new(): ZDKConstants; // inherited from NSObject
+  static new(): ZDKConstants; // inherited from NSObject
 }
 
 declare const enum ZDKContactUsVisibility {
+  ArticleListAndArticle = 0,
 
-	ArticleListAndArticle = 0,
+  ArticleListOnly = 1,
 
-	ArticleListOnly = 1,
-
-	Off = 2
+  Off = 2
 }
 
 interface ZDKCreateRequestUIDelegate extends NSObjectProtocol {
+  createRequestBarButtonImage(): UIImage;
 
-	createRequestBarButtonImage(): UIImage;
+  createRequestBarButtonLocalizedLabel(): string;
 
-	createRequestBarButtonLocalizedLabel(): string;
-
-	navBarCreateRequestUIType(): ZDKNavBarCreateRequestUIType;
+  navBarCreateRequestUIType(): ZDKNavBarCreateRequestUIType;
 }
 declare var ZDKCreateRequestUIDelegate: {
-
-	prototype: ZDKCreateRequestUIDelegate;
+  prototype: ZDKCreateRequestUIDelegate;
 };
 
 declare const enum ZDKFileType {
+  Png = 0,
 
-	Png = 0,
+  Jpg = 1,
 
-	Jpg = 1,
+  Pdf = 2,
 
-	Pdf = 2,
+  Plain = 3,
 
-	Plain = 3,
+  Word = 4,
 
-	Word = 4,
+  Excel = 5,
 
-	Excel = 5,
+  Powerpoint = 6,
 
-	Powerpoint = 6,
+  PowerpointX = 7,
 
-	PowerpointX = 7,
+  Keynote = 8,
 
-	Keynote = 8,
+  Pages = 9,
 
-	Pages = 9,
+  Numbers = 10,
 
-	Numbers = 10,
+  Binary = 11,
 
-	Binary = 11,
-
-	Heic = 12
+  Heic = 12
 }
 
 interface ZDKHelpCenterArticleRatingHandlerProtocol extends NSObjectProtocol {
+  articleRatingVoteSelectedAtIndex(
+    ratingState: ZDKHelpCenterArticleRatingStateProtocol,
+    index: number
+  ): void;
 
-	articleRatingVoteSelectedAtIndex(ratingState: ZDKHelpCenterArticleRatingStateProtocol, index: number): void;
-
-	currentArticleVote(): number;
+  currentArticleVote(): number;
 }
 declare var ZDKHelpCenterArticleRatingHandlerProtocol: {
-
-	prototype: ZDKHelpCenterArticleRatingHandlerProtocol;
+  prototype: ZDKHelpCenterArticleRatingHandlerProtocol;
 };
 
 interface ZDKHelpCenterArticleRatingStateProtocol extends NSObjectProtocol {
-
-	updateButtonStatesForButtonAtIndexSelected(index: number): void;
+  updateButtonStatesForButtonAtIndexSelected(index: number): void;
 }
 declare var ZDKHelpCenterArticleRatingStateProtocol: {
-
-	prototype: ZDKHelpCenterArticleRatingStateProtocol;
+  prototype: ZDKHelpCenterArticleRatingStateProtocol;
 };
 
 declare class ZDKHelpCenterAttachmentsDataSource extends ZDKHelpCenterDataSource {
+  static alloc(): ZDKHelpCenterAttachmentsDataSource; // inherited from NSObject
 
-	static alloc(): ZDKHelpCenterAttachmentsDataSource; // inherited from NSObject
+  static new(): ZDKHelpCenterAttachmentsDataSource; // inherited from NSObject
 
-	static new(): ZDKHelpCenterAttachmentsDataSource; // inherited from NSObject
+  constructor(o: { articleId: number });
 
-	constructor(o: { articleId: number; });
-
-	initWithArticleId(articleId: number): this;
+  initWithArticleId(articleId: number): this;
 }
 
 declare class ZDKHelpCenterContactUsRouter extends NSObject {
+  static alloc(): ZDKHelpCenterContactUsRouter; // inherited from NSObject
 
-	static alloc(): ZDKHelpCenterContactUsRouter; // inherited from NSObject
+  static new(): ZDKHelpCenterContactUsRouter; // inherited from NSObject
 
-	static new(): ZDKHelpCenterContactUsRouter; // inherited from NSObject
+  constructor(o: {
+    presentingViewController: UIViewController;
+    uiConfigs: NSArray<any> | any[];
+    zendesk: ZDKZendesk;
+    isDeflectionEnabled: boolean;
+  });
 
-	constructor(o: { presentingViewController: UIViewController; uiConfigs: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]; zendesk: ZDKZendesk; isDeflectionEnabled: boolean; });
+  decideButtonActionForEmptySearch(): void;
 
-	decideButtonActionForEmptySearch(): void;
+  decideButtonActionForNavBar(): void;
 
-	decideButtonActionForNavBar(): void;
-
-	initWithPresentingViewControllerUiConfigsZendeskIsDeflectionEnabled(presentingViewController: UIViewController, uiConfigs: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[], zendesk: ZDKZendesk, isDeflectionEnabled: boolean): this;
+  initWithPresentingViewControllerUiConfigsZendeskIsDeflectionEnabled(
+    presentingViewController: UIViewController,
+    uiConfigs: NSArray<any> | any[],
+    zendesk: ZDKZendesk,
+    isDeflectionEnabled: boolean
+  ): this;
 }
 
 interface ZDKHelpCenterConversationsUIDelegate extends NSObjectProtocol {
+  active(): ZDKContactUsVisibility;
 
-	active(): ZDKContactUsVisibility;
+  conversationsBarButtonImage?(): UIImage;
 
-	conversationsBarButtonImage?(): UIImage;
+  conversationsBarButtonLocalizedLabel?(): string;
 
-	conversationsBarButtonLocalizedLabel?(): string;
-
-	navBarConversationsUIType(): ZDKNavBarConversationsUIType;
+  navBarConversationsUIType(): ZDKNavBarConversationsUIType;
 }
 declare var ZDKHelpCenterConversationsUIDelegate: {
-
-	prototype: ZDKHelpCenterConversationsUIDelegate;
+  prototype: ZDKHelpCenterConversationsUIDelegate;
 };
 
-declare class ZDKHelpCenterDataSource extends NSObject implements UITableViewDataSource {
+declare class ZDKHelpCenterDataSource extends NSObject
+  implements UITableViewDataSource {
+  static alloc(): ZDKHelpCenterDataSource; // inherited from NSObject
 
-	static alloc(): ZDKHelpCenterDataSource; // inherited from NSObject
+  static cellIdentifierForDataSource(): string;
 
-	static cellIdentifierForDataSource(): string;
+  static new(): ZDKHelpCenterDataSource; // inherited from NSObject
 
-	static new(): ZDKHelpCenterDataSource; // inherited from NSObject
+  readonly hasItems: boolean;
 
-	readonly hasItems: boolean;
+  readonly items: NSArray<any>;
 
-	readonly items: NSArray<any>;
+  readonly provider: ZDKHelpCenterProvider;
 
-	readonly provider: ZDKHelpCenterProvider;
+  readonly debugDescription: string; // inherited from NSObjectProtocol
 
-	readonly debugDescription: string; // inherited from NSObjectProtocol
+  readonly description: string; // inherited from NSObjectProtocol
 
-	readonly description: string; // inherited from NSObjectProtocol
+  readonly hash: number; // inherited from NSObjectProtocol
 
-	readonly hash: number; // inherited from NSObjectProtocol
+  readonly isProxy: boolean; // inherited from NSObjectProtocol
 
-	readonly isProxy: boolean; // inherited from NSObjectProtocol
+  readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
 
-	readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
+  readonly; // inherited from NSObjectProtocol
 
-	readonly  // inherited from NSObjectProtocol
+  class(): typeof NSObject;
 
-	class(): typeof NSObject;
+  conformsToProtocol(aProtocol: any /* Protocol */): boolean;
 
-	conformsToProtocol(aProtocol: any /* Protocol */): boolean;
+  isEqual(object: any): boolean;
 
-	isEqual(object: any): boolean;
+  isKindOfClass(aClass: typeof NSObject): boolean;
 
-	isKindOfClass(aClass: typeof NSObject): boolean;
+  isMemberOfClass(aClass: typeof NSObject): boolean;
 
-	isMemberOfClass(aClass: typeof NSObject): boolean;
+  itemAtIndexPath(indexPath: NSIndexPath): any;
 
-	itemAtIndexPath(indexPath: NSIndexPath): any;
+  numberOfSectionsInTableView(tableView: UITableView): number;
 
-	numberOfSectionsInTableView(tableView: UITableView): number;
+  performSelector(aSelector: string): any;
 
-	performSelector(aSelector: string): any;
+  performSelectorWithObject(aSelector: string, object: any): any;
 
-	performSelectorWithObject(aSelector: string, object: any): any;
+  performSelectorWithObjectWithObject(
+    aSelector: string,
+    object1: any,
+    object2: any
+  ): any;
 
-	performSelectorWithObjectWithObject(aSelector: string, object1: any, object2: any): any;
+  reloadData(): void;
 
-	reloadData(): void;
+  respondsToSelector(aSelector: string): boolean;
 
-	respondsToSelector(aSelector: string): boolean;
+  retainCount(): number;
 
-	retainCount(): number;
+  sectionIndexTitlesForTableView(tableView: UITableView): NSArray<string>;
 
-	sectionIndexTitlesForTableView(tableView: UITableView): NSArray<string>;
+  self(): this;
 
-	self(): this;
+  tableViewCanEditRowAtIndexPath(
+    tableView: UITableView,
+    indexPath: NSIndexPath
+  ): boolean;
 
-	tableViewCanEditRowAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): boolean;
+  tableViewCanMoveRowAtIndexPath(
+    tableView: UITableView,
+    indexPath: NSIndexPath
+  ): boolean;
 
-	tableViewCanMoveRowAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): boolean;
+  tableViewCellForRowAtIndexPath(
+    tableView: UITableView,
+    indexPath: NSIndexPath
+  ): UITableViewCell;
 
-	tableViewCellForRowAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): UITableViewCell;
+  tableViewCommitEditingStyleForRowAtIndexPath(
+    tableView: UITableView,
+    editingStyle: UITableViewCellEditingStyle,
+    indexPath: NSIndexPath
+  ): void;
 
-	tableViewCommitEditingStyleForRowAtIndexPath(tableView: UITableView, editingStyle: UITableViewCellEditingStyle, indexPath: NSIndexPath): void;
+  tableViewMoveRowAtIndexPathToIndexPath(
+    tableView: UITableView,
+    sourceIndexPath: NSIndexPath,
+    destinationIndexPath: NSIndexPath
+  ): void;
 
-	tableViewMoveRowAtIndexPathToIndexPath(tableView: UITableView, sourceIndexPath: NSIndexPath, destinationIndexPath: NSIndexPath): void;
+  tableViewNumberOfRowsInSection(
+    tableView: UITableView,
+    section: number
+  ): number;
 
-	tableViewNumberOfRowsInSection(tableView: UITableView, section: number): number;
+  tableViewSectionForSectionIndexTitleAtIndex(
+    tableView: UITableView,
+    title: string,
+    index: number
+  ): number;
 
-	tableViewSectionForSectionIndexTitleAtIndex(tableView: UITableView, title: string, index: number): number;
+  tableViewTitleForFooterInSection(
+    tableView: UITableView,
+    section: number
+  ): string;
 
-	tableViewTitleForFooterInSection(tableView: UITableView, section: number): string;
-
-	tableViewTitleForHeaderInSection(tableView: UITableView, section: number): string;
+  tableViewTitleForHeaderInSection(
+    tableView: UITableView,
+    section: number
+  ): string;
 }
 
 interface ZDKHelpCenterDelegate extends NSObjectProtocol {
-
-	uiDelegate: ZDKHelpCenterConversationsUIDelegate;
+  uiDelegate: ZDKHelpCenterConversationsUIDelegate;
 }
 declare var ZDKHelpCenterDelegate: {
-
-	prototype: ZDKHelpCenterDelegate;
+  prototype: ZDKHelpCenterDelegate;
 };
 
 declare var ZDKHelpCenterEmptyHelpCenterDescription: string;
 
 declare const enum ZDKHelpCenterError {
+  InvalidCategoryIds = 100,
 
-	InvalidCategoryIds = 100,
+  InvalidSectionIds = 101,
 
-	InvalidSectionIds = 101,
+  NoArticlesForLabels = 102,
 
-	NoArticlesForLabels = 102,
-
-	EmptyHelpCenter = 103
+  EmptyHelpCenter = 103
 }
 
 declare var ZDKHelpCenterErrorDomain: string;
@@ -333,388 +372,474 @@ declare var ZDKHelpCenterNoCategoriesLocalisedDescription: string;
 declare var ZDKHelpCenterNoSectionsLocalisedDescription: string;
 
 declare class ZDKHelpCenterUi extends NSObject {
+  static alloc(): ZDKHelpCenterUi; // inherited from NSObject
 
-	static alloc(): ZDKHelpCenterUi; // inherited from NSObject
+  static buildHelpCenterArticle(
+    article: ZDKHelpCenterArticle
+  ): UIViewController;
 
-	static buildHelpCenterArticle(article: ZDKHelpCenterArticle): UIViewController;
+  static buildHelpCenterArticleAndConfigs(
+    article: ZDKHelpCenterArticle,
+    configs: NSArray<any> | any[]
+  ): UIViewController;
 
-	static buildHelpCenterArticleAndConfigs(article: ZDKHelpCenterArticle, configs: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]): UIViewController;
+  static buildHelpCenterArticleUi(
+    article: ZDKHelpCenterArticle
+  ): UIViewController;
 
-	static buildHelpCenterArticleUi(article: ZDKHelpCenterArticle): UIViewController;
+  static buildHelpCenterArticleUiAndConfigs(
+    article: ZDKHelpCenterArticle,
+    configs: NSArray<any> | any[]
+  ): UIViewController;
 
-	static buildHelpCenterArticleUiAndConfigs(article: ZDKHelpCenterArticle, configs: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]): UIViewController;
+  static buildHelpCenterArticleUiWithArticleId(
+    articleId: string
+  ): UIViewController;
 
-	static buildHelpCenterArticleUiWithArticleId(articleId: string): UIViewController;
+  static buildHelpCenterArticleUiWithArticleIdAndConfigs(
+    articleId: string,
+    configs: NSArray<any> | any[]
+  ): UIViewController;
 
-	static buildHelpCenterArticleUiWithArticleIdAndConfigs(articleId: string, configs: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]): UIViewController;
+  static buildHelpCenterArticleWithArticleId(
+    articleId: string
+  ): UIViewController;
 
-	static buildHelpCenterArticleWithArticleId(articleId: string): UIViewController;
+  static buildHelpCenterArticleWithArticleIdAndConfigs(
+    articleId: string,
+    configs: NSArray<any> | any[]
+  ): UIViewController;
 
-	static buildHelpCenterArticleWithArticleIdAndConfigs(articleId: string, configs: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]): UIViewController;
+  static buildHelpCenterOverview(): UIViewController;
 
-	static buildHelpCenterOverview(): UIViewController;
+  static buildHelpCenterOverviewUi(): UIViewController;
 
-	static buildHelpCenterOverviewUi(): UIViewController;
+  static buildHelpCenterOverviewUiWithConfigs(
+    configs: NSArray<any> | any[]
+  ): UIViewController;
 
-	static buildHelpCenterOverviewUiWithConfigs(configs: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]): UIViewController;
+  static buildHelpCenterOverviewWithConfigs(
+    configs: NSArray<any> | any[]
+  ): UIViewController;
 
-	static buildHelpCenterOverviewWithConfigs(configs: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]): UIViewController;
-
-	static new(): ZDKHelpCenterUi; // inherited from NSObject
+  static new(): ZDKHelpCenterUi; // inherited from NSObject
 }
 
-declare class ZDKHelpCenterUiConfiguration extends NSObject implements ZDKUiConfiguration {
+declare class ZDKHelpCenterUiConfiguration extends NSObject {
+  static alloc(): ZDKHelpCenterUiConfiguration; // inherited from NSObject
 
-	static alloc(): ZDKHelpCenterUiConfiguration; // inherited from NSObject
+  static new(): ZDKHelpCenterUiConfiguration; // inherited from NSObject
 
-	static new(): ZDKHelpCenterUiConfiguration; // inherited from NSObject
+  deflectionEnabled: boolean;
 
-	deflectionEnabled: boolean;
+  groupIds: NSArray<number>;
 
-	groupIds: NSArray<number>;
+  groupType: ZDKHelpCenterOverviewGroupType;
 
-	groupType: ZDKHelpCenterOverviewGroupType;
+  hideContactSupport: boolean;
 
-	hideContactSupport: boolean;
+  labels: NSArray<string>;
 
-	labels: NSArray<string>;
+  readonly overviewContentModel: ZDKHelpCenterOverviewContentModel;
 
-	readonly overviewContentModel: ZDKHelpCenterOverviewContentModel;
+  showContactOptions: boolean;
 
-	showContactOptions: boolean;
+  showContactOptionsOnEmptySearch: boolean;
 
-	showContactOptionsOnEmptySearch: boolean;
+  readonly debugDescription: string; // inherited from NSObjectProtocol
 
-	readonly debugDescription: string; // inherited from NSObjectProtocol
+  readonly description: string; // inherited from NSObjectProtocol
 
-	readonly description: string; // inherited from NSObjectProtocol
+  readonly hash: number; // inherited from NSObjectProtocol
 
-	readonly hash: number; // inherited from NSObjectProtocol
+  readonly isProxy: boolean; // inherited from NSObjectProtocol
 
-	readonly isProxy: boolean; // inherited from NSObjectProtocol
+  readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
 
-	readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
+  readonly; // inherited from NSObjectProtocol
 
-	readonly  // inherited from NSObjectProtocol
+  constructor(); // inherited from any
 
-	constructor(); // inherited from ZDKUiConfiguration
+  class(): typeof NSObject;
 
-	class(): typeof NSObject;
+  conformsToProtocol(aProtocol: any /* Protocol */): boolean;
 
-	conformsToProtocol(aProtocol: any /* Protocol */): boolean;
+  init(): this;
 
-	init(): this;
+  isEqual(object: any): boolean;
 
-	isEqual(object: any): boolean;
+  isKindOfClass(aClass: typeof NSObject): boolean;
 
-	isKindOfClass(aClass: typeof NSObject): boolean;
+  isMemberOfClass(aClass: typeof NSObject): boolean;
 
-	isMemberOfClass(aClass: typeof NSObject): boolean;
+  performSelector(aSelector: string): any;
 
-	performSelector(aSelector: string): any;
+  performSelectorWithObject(aSelector: string, object: any): any;
 
-	performSelectorWithObject(aSelector: string, object: any): any;
+  performSelectorWithObjectWithObject(
+    aSelector: string,
+    object1: any,
+    object2: any
+  ): any;
 
-	performSelectorWithObjectWithObject(aSelector: string, object1: any, object2: any): any;
+  respondsToSelector(aSelector: string): boolean;
 
-	respondsToSelector(aSelector: string): boolean;
+  retainCount(): number;
 
-	retainCount(): number;
-
-	self(): this;
+  self(): this;
 }
 
 declare class ZDKLayoutGuideApplicator extends NSObject {
+  static alloc(): ZDKLayoutGuideApplicator; // inherited from NSObject
 
-	static alloc(): ZDKLayoutGuideApplicator; // inherited from NSObject
+  static new(): ZDKLayoutGuideApplicator; // inherited from NSObject
 
-	static new(): ZDKLayoutGuideApplicator; // inherited from NSObject
+  constructor(o: {
+    viewController: UIViewController;
+    topLevelView: UIView;
+    layoutPosition: ZDKLayoutGuideApplicatorPosition;
+  });
 
-	constructor(o: { viewController: UIViewController; topLevelView: UIView; layoutPosition: ZDKLayoutGuideApplicatorPosition; });
-
-	initWithViewControllerTopLevelViewLayoutPosition(viewController: UIViewController, topLevelView: UIView, position: ZDKLayoutGuideApplicatorPosition): this;
+  initWithViewControllerTopLevelViewLayoutPosition(
+    viewController: UIViewController,
+    topLevelView: UIView,
+    position: ZDKLayoutGuideApplicatorPosition
+  ): this;
 }
 
 declare const enum ZDKLayoutGuideApplicatorPosition {
+  Top = 0,
 
-	Top = 0,
-
-	Bottom = 1
+  Bottom = 1
 }
 
 declare const enum ZDKNavBarCreateRequestUIType {
+  LocalizedLabel = 0,
 
-	LocalizedLabel = 0,
-
-	Image = 1
+  Image = 1
 }
 
 declare class ZDKRequestAttachment extends NSObject {
+  static alloc(): ZDKRequestAttachment; // inherited from NSObject
 
-	static alloc(): ZDKRequestAttachment; // inherited from NSObject
+  static new(): ZDKRequestAttachment; // inherited from NSObject
 
-	static new(): ZDKRequestAttachment; // inherited from NSObject
+  readonly data: NSData;
 
-	readonly data: NSData;
+  readonly fileType: ZDKFileType;
 
-	readonly fileType: ZDKFileType;
+  readonly filename: string;
 
-	readonly filename: string;
+  constructor(o: { filename: string; data: NSData; fileType: ZDKFileType });
 
-	constructor(o: { filename: string; data: NSData; fileType: ZDKFileType; });
-
-	initWithFilenameDataFileType(filename: string, data: NSData, fileType: ZDKFileType): this;
+  initWithFilenameDataFileType(
+    filename: string,
+    data: NSData,
+    fileType: ZDKFileType
+  ): this;
 }
 
 declare class ZDKRequestUi extends NSObject {
+  static alloc(): ZDKRequestUi; // inherited from NSObject
 
-	static alloc(): ZDKRequestUi; // inherited from NSObject
+  static buildRequestList(): UIViewController;
 
-	static buildRequestList(): UIViewController;
+  static buildRequestListWith(
+    configurations: NSArray<any> | any[]
+  ): UIViewController;
 
-	static buildRequestListWith(configurations: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]): UIViewController;
+  static buildRequestUi(): UIViewController;
 
-	static buildRequestUi(): UIViewController;
+  static buildRequestUiWith(
+    configurations: NSArray<any> | any[]
+  ): UIViewController;
 
-	static buildRequestUiWith(configurations: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]): UIViewController;
+  static buildRequestUiWithRequestId(requestId: string): UIViewController;
 
-	static buildRequestUiWithRequestId(requestId: string): UIViewController;
+  static buildRequestUiWithRequestIdConfigurations(
+    requestId: string,
+    configurations: NSArray<any> | any[]
+  ): UIViewController;
 
-	static buildRequestUiWithRequestIdConfigurations(requestId: string, configurations: NSArray<ZDKUiConfiguration> | ZDKUiConfiguration[]): UIViewController;
-
-	static new(): ZDKRequestUi; // inherited from NSObject
+  static new(): ZDKRequestUi; // inherited from NSObject
 }
 
-declare class ZDKRequestUiConfiguration extends NSObject implements ZDKUiConfiguration {
+declare class ZDKRequestUiConfiguration extends NSObject {
+  static alloc(): ZDKRequestUiConfiguration; // inherited from NSObject
 
-	static alloc(): ZDKRequestUiConfiguration; // inherited from NSObject
+  static new(): ZDKRequestUiConfiguration; // inherited from NSObject
 
-	static new(): ZDKRequestUiConfiguration; // inherited from NSObject
+  fields: NSArray<ZDKCustomField>;
 
-	fields: NSArray<ZDKCustomField>;
+  fileAttachments: NSArray<ZDKRequestAttachment>;
 
-	fileAttachments: NSArray<ZDKRequestAttachment>;
+  subject: string;
 
-	subject: string;
+  tags: NSArray<string>;
 
-	tags: NSArray<string>;
+  ticketFormID: number;
 
-	ticketFormID: number;
+  readonly debugDescription: string; // inherited from NSObjectProtocol
 
-	readonly debugDescription: string; // inherited from NSObjectProtocol
+  readonly description: string; // inherited from NSObjectProtocol
 
-	readonly description: string; // inherited from NSObjectProtocol
+  readonly hash: number; // inherited from NSObjectProtocol
 
-	readonly hash: number; // inherited from NSObjectProtocol
+  readonly isProxy: boolean; // inherited from NSObjectProtocol
 
-	readonly isProxy: boolean; // inherited from NSObjectProtocol
+  readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
 
-	readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
+  readonly; // inherited from NSObjectProtocol
 
-	readonly  // inherited from NSObjectProtocol
+  constructor(); // inherited from any
 
-	constructor(); // inherited from ZDKUiConfiguration
+  class(): typeof NSObject;
 
-	class(): typeof NSObject;
+  conformsToProtocol(aProtocol: any /* Protocol */): boolean;
 
-	conformsToProtocol(aProtocol: any /* Protocol */): boolean;
+  init(): this;
 
-	init(): this;
+  isEqual(object: any): boolean;
 
-	isEqual(object: any): boolean;
+  isKindOfClass(aClass: typeof NSObject): boolean;
 
-	isKindOfClass(aClass: typeof NSObject): boolean;
+  isMemberOfClass(aClass: typeof NSObject): boolean;
 
-	isMemberOfClass(aClass: typeof NSObject): boolean;
+  performSelector(aSelector: string): any;
 
-	performSelector(aSelector: string): any;
+  performSelectorWithObject(aSelector: string, object: any): any;
 
-	performSelectorWithObject(aSelector: string, object: any): any;
+  performSelectorWithObjectWithObject(
+    aSelector: string,
+    object1: any,
+    object2: any
+  ): any;
 
-	performSelectorWithObjectWithObject(aSelector: string, object1: any, object2: any): any;
+  respondsToSelector(aSelector: string): boolean;
 
-	respondsToSelector(aSelector: string): boolean;
+  retainCount(): number;
 
-	retainCount(): number;
-
-	self(): this;
+  self(): this;
 }
 
 interface ZDKSpinnerDelegate extends NSObjectProtocol {
+  center: CGPoint;
 
-	center: CGPoint;
+  frame: CGRect;
 
-	frame: CGRect;
+  hidden: boolean;
 
-	hidden: boolean;
+  startAnimating(): void;
 
-	startAnimating(): void;
-
-	stopAnimating(): void;
+  stopAnimating(): void;
 }
 declare var ZDKSpinnerDelegate: {
-
-	prototype: ZDKSpinnerDelegate;
+  prototype: ZDKSpinnerDelegate;
 };
 
 declare class ZDKSuasDebugLogger extends NSObject {
+  static alloc(): ZDKSuasDebugLogger; // inherited from NSObject
 
-	static alloc(): ZDKSuasDebugLogger; // inherited from NSObject
+  static new(): ZDKSuasDebugLogger; // inherited from NSObject
 
-	static new(): ZDKSuasDebugLogger; // inherited from NSObject
+  static setEnabled(newValue: boolean): void;
 
-	static setEnabled(newValue: boolean): void;
-
-	static enabled: boolean;
+  static enabled: boolean;
 }
 
-declare class ZDKSupportAttachmentCell extends UITableViewCell implements UIAppearanceContainer {
+declare class ZDKSupportAttachmentCell extends UITableViewCell
+  implements UIAppearanceContainer {
+  static alloc(): ZDKSupportAttachmentCell; // inherited from NSObject
 
-	static alloc(): ZDKSupportAttachmentCell; // inherited from NSObject
+  static appearance(): ZDKSupportAttachmentCell; // inherited from UIAppearance
 
-	static appearance(): ZDKSupportAttachmentCell; // inherited from UIAppearance
+  static appearanceForTraitCollection(
+    trait: UITraitCollection
+  ): ZDKSupportAttachmentCell; // inherited from UIAppearance
 
-	static appearanceForTraitCollection(trait: UITraitCollection): ZDKSupportAttachmentCell; // inherited from UIAppearance
+  static appearanceForTraitCollectionWhenContainedIn(
+    trait: UITraitCollection,
+    ContainerClass: typeof NSObject
+  ): ZDKSupportAttachmentCell; // inherited from UIAppearance
 
-	static appearanceForTraitCollectionWhenContainedIn(trait: UITraitCollection, ContainerClass: typeof NSObject): ZDKSupportAttachmentCell; // inherited from UIAppearance
+  static appearanceForTraitCollectionWhenContainedInInstancesOfClasses(
+    trait: UITraitCollection,
+    containerTypes: NSArray<typeof NSObject> | typeof NSObject[]
+  ): ZDKSupportAttachmentCell; // inherited from UIAppearance
 
-	static appearanceForTraitCollectionWhenContainedInInstancesOfClasses(trait: UITraitCollection, containerTypes: NSArray<typeof NSObject> | typeof NSObject[]): ZDKSupportAttachmentCell; // inherited from UIAppearance
+  static appearanceWhenContainedIn(
+    ContainerClass: typeof NSObject
+  ): ZDKSupportAttachmentCell; // inherited from UIAppearance
 
-	static appearanceWhenContainedIn(ContainerClass: typeof NSObject): ZDKSupportAttachmentCell; // inherited from UIAppearance
+  static appearanceWhenContainedInInstancesOfClasses(
+    containerTypes: NSArray<typeof NSObject> | typeof NSObject[]
+  ): ZDKSupportAttachmentCell; // inherited from UIAppearance
 
-	static appearanceWhenContainedInInstancesOfClasses(containerTypes: NSArray<typeof NSObject> | typeof NSObject[]): ZDKSupportAttachmentCell; // inherited from UIAppearance
+  static cellIdentifier(): string;
 
-	static cellIdentifier(): string;
+  static new(): ZDKSupportAttachmentCell; // inherited from NSObject
 
-	static new(): ZDKSupportAttachmentCell; // inherited from NSObject
+  readonly fileSize: UILabel;
 
-	readonly fileSize: UILabel;
+  readonly title: UILabel;
 
-	readonly title: UILabel;
+  readonly debugDescription: string; // inherited from NSObjectProtocol
 
-	readonly debugDescription: string; // inherited from NSObjectProtocol
+  readonly description: string; // inherited from NSObjectProtocol
 
-	readonly description: string; // inherited from NSObjectProtocol
+  readonly hash: number; // inherited from NSObjectProtocol
 
-	readonly hash: number; // inherited from NSObjectProtocol
+  readonly isProxy: boolean; // inherited from NSObjectProtocol
 
-	readonly isProxy: boolean; // inherited from NSObjectProtocol
+  readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
 
-	readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
+  readonly; // inherited from NSObjectProtocol
 
-	readonly  // inherited from NSObjectProtocol
+  class(): typeof NSObject;
 
-	class(): typeof NSObject;
+  conformsToProtocol(aProtocol: any /* Protocol */): boolean;
 
-	conformsToProtocol(aProtocol: any /* Protocol */): boolean;
+  isEqual(object: any): boolean;
 
-	isEqual(object: any): boolean;
+  isKindOfClass(aClass: typeof NSObject): boolean;
 
-	isKindOfClass(aClass: typeof NSObject): boolean;
+  isMemberOfClass(aClass: typeof NSObject): boolean;
 
-	isMemberOfClass(aClass: typeof NSObject): boolean;
+  performSelector(aSelector: string): any;
 
-	performSelector(aSelector: string): any;
+  performSelectorWithObject(aSelector: string, object: any): any;
 
-	performSelectorWithObject(aSelector: string, object: any): any;
+  performSelectorWithObjectWithObject(
+    aSelector: string,
+    object1: any,
+    object2: any
+  ): any;
 
-	performSelectorWithObjectWithObject(aSelector: string, object1: any, object2: any): any;
+  respondsToSelector(aSelector: string): boolean;
 
-	respondsToSelector(aSelector: string): boolean;
+  retainCount(): number;
 
-	retainCount(): number;
-
-	self(): this;
+  self(): this;
 }
 
 declare class ZDKSupportUI extends NSObject {
+  static alloc(): ZDKSupportUI; // inherited from NSObject
 
-	static alloc(): ZDKSupportUI; // inherited from NSObject
+  static initializeWithZendesk(zendesk: ZDKZendesk): void;
 
-	static initializeWithZendesk(zendesk: ZDKZendesk): void;
+  static new(): ZDKSupportUI; // inherited from NSObject
 
-	static new(): ZDKSupportUI; // inherited from NSObject
+  helpCenterLocaleOverride: string;
 
-	helpCenterLocaleOverride: string;
+  static readonly instance: ZDKSupportUI;
 
-	static readonly instance: ZDKSupportUI;
-
-	refreshRequestWithRequestId(requestId: string): boolean;
+  refreshRequestWithRequestId(requestId: string): boolean;
 }
 
 declare class ZDKTheme extends NSObject {
+  static alloc(): ZDKTheme; // inherited from NSObject
 
-	static alloc(): ZDKTheme; // inherited from NSObject
+  static new(): ZDKTheme; // inherited from NSObject
 
-	static new(): ZDKTheme; // inherited from NSObject
+  primaryColor: UIColor;
 
-	primaryColor: UIColor;
-
-	static readonly currentTheme: ZDKTheme;
+  static readonly currentTheme: ZDKTheme;
 }
 
 declare class ZDKToastViewWrapper extends UIView {
+  static alloc(): ZDKToastViewWrapper; // inherited from NSObject
 
-	static alloc(): ZDKToastViewWrapper; // inherited from NSObject
+  static appearance(): ZDKToastViewWrapper; // inherited from UIAppearance
 
-	static appearance(): ZDKToastViewWrapper; // inherited from UIAppearance
+  static appearanceForTraitCollection(
+    trait: UITraitCollection
+  ): ZDKToastViewWrapper; // inherited from UIAppearance
 
-	static appearanceForTraitCollection(trait: UITraitCollection): ZDKToastViewWrapper; // inherited from UIAppearance
+  static appearanceForTraitCollectionWhenContainedIn(
+    trait: UITraitCollection,
+    ContainerClass: typeof NSObject
+  ): ZDKToastViewWrapper; // inherited from UIAppearance
 
-	static appearanceForTraitCollectionWhenContainedIn(trait: UITraitCollection, ContainerClass: typeof NSObject): ZDKToastViewWrapper; // inherited from UIAppearance
+  static appearanceForTraitCollectionWhenContainedInInstancesOfClasses(
+    trait: UITraitCollection,
+    containerTypes: NSArray<typeof NSObject> | typeof NSObject[]
+  ): ZDKToastViewWrapper; // inherited from UIAppearance
 
-	static appearanceForTraitCollectionWhenContainedInInstancesOfClasses(trait: UITraitCollection, containerTypes: NSArray<typeof NSObject> | typeof NSObject[]): ZDKToastViewWrapper; // inherited from UIAppearance
+  static appearanceWhenContainedIn(
+    ContainerClass: typeof NSObject
+  ): ZDKToastViewWrapper; // inherited from UIAppearance
 
-	static appearanceWhenContainedIn(ContainerClass: typeof NSObject): ZDKToastViewWrapper; // inherited from UIAppearance
+  static appearanceWhenContainedInInstancesOfClasses(
+    containerTypes: NSArray<typeof NSObject> | typeof NSObject[]
+  ): ZDKToastViewWrapper; // inherited from UIAppearance
 
-	static appearanceWhenContainedInInstancesOfClasses(containerTypes: NSArray<typeof NSObject> | typeof NSObject[]): ZDKToastViewWrapper; // inherited from UIAppearance
+  static new(): ZDKToastViewWrapper; // inherited from NSObject
 
-	static new(): ZDKToastViewWrapper; // inherited from NSObject
+  readonly isVisible: boolean;
 
-	readonly isVisible: boolean;
+  dismiss(): void;
 
-	dismiss(): void;
+  hideToastView(hide: boolean): void;
 
-	hideToastView(hide: boolean): void;
+  showErrorInViewControllerWithMessage(
+    viewController: UIViewController,
+    message: string
+  ): void;
 
-	showErrorInViewControllerWithMessage(viewController: UIViewController, message: string): void;
+  showErrorInViewControllerWithMessageButtonTitleAction(
+    viewController: UIViewController,
+    message: string,
+    buttonTitle: string,
+    action: () => void
+  ): void;
 
-	showErrorInViewControllerWithMessageButtonTitleAction(viewController: UIViewController, message: string, buttonTitle: string, action: () => void): void;
-
-	showErrorInViewControllerWithMessageDuration(viewController: UIViewController, message: string, duration: number): void;
+  showErrorInViewControllerWithMessageDuration(
+    viewController: UIViewController,
+    message: string,
+    duration: number
+  ): void;
 }
 
 declare class ZDKUIUtil extends NSObject {
+  static alloc(): ZDKUIUtil; // inherited from NSObject
 
-	static alloc(): ZDKUIUtil; // inherited from NSObject
+  static appearanceValueForClassSelector(
+    viewClass: typeof NSObject,
+    selector: string
+  ): any;
 
-	static appearanceValueForClassSelector(viewClass: typeof NSObject, selector: string): any;
+  static appearanceValueForClassWhenContainedInSelector(
+    viewClass: typeof NSObject,
+    containerClass: typeof NSObject,
+    selector: string
+  ): any;
 
-	static appearanceValueForClassWhenContainedInSelector(viewClass: typeof NSObject, containerClass: typeof NSObject, selector: string): any;
+  static appearanceValueForViewSelector(view: UIView, selector: string): any;
 
-	static appearanceValueForViewSelector(view: UIView, selector: string): any;
+  static buildButtonWithFrameAndTitle(frame: CGRect, title: string): UIButton;
 
-	static buildButtonWithFrameAndTitle(frame: CGRect, title: string): UIButton;
+  static currentInterfaceOrientation(): UIInterfaceOrientation;
 
-	static currentInterfaceOrientation(): UIInterfaceOrientation;
+  static fixOrientationOfImage(image: UIImage): UIImage;
 
-	static fixOrientationOfImage(image: UIImage): UIImage;
+  static isLandscape(): boolean;
 
-	static isLandscape(): boolean;
+  static isNewerVersion(majorVersionNumber: string): boolean;
 
-	static isNewerVersion(majorVersionNumber: string): boolean;
+  static isOlderVersion(majorVersionNumber: string): boolean;
 
-	static isOlderVersion(majorVersionNumber: string): boolean;
+  static isPad(): boolean;
 
-	static isPad(): boolean;
+  static isSameVersion(majorVersionNumber: number): boolean;
 
-	static isSameVersion(majorVersionNumber: number): boolean;
+  static new(): ZDKUIUtil; // inherited from NSObject
 
-	static new(): ZDKUIUtil; // inherited from NSObject
+  static scaledHeightForSizeConstrainedByWidth(
+    size: CGSize,
+    width: number
+  ): number;
 
-	static scaledHeightForSizeConstrainedByWidth(size: CGSize, width: number): number;
+  static separatorHeightForScreenScale(): number;
 
-	static separatorHeightForScreenScale(): number;
-
-	static shouldEnableAttachments(viewController: UIViewController): boolean;
+  static shouldEnableAttachments(viewController: UIViewController): boolean;
 }

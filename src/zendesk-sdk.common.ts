@@ -7,13 +7,18 @@ export interface RequestOptions {
   requestId?: string;
   requestSubject?: string;
   addDeviceInfo?: boolean;
-  tags?: Array<string>;
-  files?: Array<File>;
-  customFields?: Array<zendesk.support.CustomField>;
+  tags?: string[];
+  files?: File[];
+  customFields?: CustomField[];
   ticketForm?: {
     ticketFormId: string;
-    customFields: Array<zendesk.support.CustomField>
+    customFields: CustomField[]
   };
+}
+
+export interface CustomField {
+  id: string;
+  value: string;
 }
 
 
@@ -28,7 +33,7 @@ export interface HelpCenterOptions {
   /** default: false */
   contactUsButtonVisible?: boolean;
   /** default: false */
-  categoriesCollapsedAndroid?: boolean;
+  categoriesCollapsed?: boolean;
   /** default: true */
   conversationsMenu?: boolean;
 }

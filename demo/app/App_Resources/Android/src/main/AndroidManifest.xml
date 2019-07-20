@@ -35,5 +35,13 @@
 			</intent-filter>
 		</activity>
 		<activity android:name="com.tns.ErrorReportActivity"/>
+
+		<activity android:name="zendesk.support.guide.HelpCenterActivity" android:theme="@style/RhanbDarkTheme"/>
+
+        <activity android:name="zendesk.support.guide.ViewArticleActivity" android:theme="@style/RhanbDarkTheme" />
+
+        <activity android:name="zendesk.support.requestlist.RequestListActivity" android:theme="@style/RhanbDarkTheme" />
+
+        <activity android:name="zendesk.support.request.RequestActivity" android:theme="@style/RhanbDarkTheme" />
 	</application>
 </manifest>
